@@ -1,5 +1,5 @@
 import { Button, IconButton } from '@mui/material';
-import { ChevronDown, Download, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 function Hero() {
 	const scrollToSection = (id: string) => {
@@ -73,7 +73,7 @@ function Hero() {
 					>
 						Get In Touch
 					</Button>
-					<Button
+					{/* <Button
 						variant="outlined"
 						size="large"
 						startIcon={<Download size={20} />}
@@ -91,9 +91,11 @@ function Hero() {
 							},
 							transition: 'all 0.3s ease'
 						}}
+						href="/kennethPangResume.pdf"
+						download="Kenneth_Pang_Resume.pdf"
 					>
-						Download CV
-					</Button>
+						Download Resume
+					</Button> */}
 				</div>
 
 				{/* Social Links */}
