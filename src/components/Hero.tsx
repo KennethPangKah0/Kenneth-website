@@ -15,6 +15,7 @@ function Hero() {
 			});
 		}
 	};
+	// Testing
 
 	return (
 		<section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden pt-20 pb-8">
