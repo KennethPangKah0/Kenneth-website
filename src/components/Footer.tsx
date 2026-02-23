@@ -5,7 +5,7 @@ function Footer() {
 
 	return (
 		<footer className="relative overflow-hidden">
-			<div className="relative z-10 pb-8 border-t-2 border-gray-200">
+			<div className="relative z-10 pb-28 border-t-2 border-gray-200">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					{/* White Container Card - Matching Hero sizing */}
 					<div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-6 md:p-8 relative overflow-hidden">

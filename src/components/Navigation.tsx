@@ -51,10 +51,10 @@ function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProps) {
 	};
 
 	return (
-		<nav className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
-			{/* Vertical Right-Side Navigation */}
-			<div className="bg-white/90 backdrop-blur-xl rounded-full shadow-2xl px-2.5 py-3">
-				<div className="flex flex-col items-center gap-1">
+		<nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden lg:block">
+			{/* Horizontal Bottom Navigation */}
+			<div className="bg-white/90 backdrop-blur-xl rounded-full shadow-2xl px-3 py-2.5">
+				<div className="flex items-center gap-1">
 					{navigation.map((item) => {
 						const Icon = item.icon;
 						const isActive = activeSection === item.id;
@@ -64,12 +64,12 @@ function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProps) {
 								{/* Icon */}
 								<Icon size={20} className={`transition-all duration-300 ${isActive ? 'text-gray-900 scale-110' : 'text-gray-400 group-hover:text-gray-700 group-hover:scale-110'}`} strokeWidth={2} />
 
-								{/* Hover Label Tooltip - Appears on Left */}
-								<div className="absolute right-full mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+								{/* Hover Label Tooltip - Appears on Top */}
+								<div className="absolute bottom-full mb-3 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
 									<div className="bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-lg">
 										{item.name}
-										{/* Arrow pointing right */}
-										<div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-0 h-0 border-t-4 border-b-4 border-l-4 border-transparent border-l-gray-900"></div>
+										{/* Arrow pointing down */}
+										<div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
 									</div>
 								</div>
 							</button>
