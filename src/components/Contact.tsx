@@ -80,10 +80,10 @@ function Contact() {
 						{/* Contact Info Cards */}
 						<div className="space-y-4">
 							{contactInfo.map((item, index) => (
-								<a key={index} href={item.href || '#'} className={`group block relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 transition-all duration-300 hover:bg-white/10 hover:border-yellow-400/50 hover:shadow-lg hover:shadow-yellow-400/10 hover:-translate-y-1 ${!item.href ? 'pointer-events-none' : ''}`}>
+								<a key={index} href={item.href || '#'} className={`no-underline group block relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 transition-all duration-300 hover:bg-white/10 hover:border-yellow-400/50 hover:shadow-lg hover:shadow-yellow-400/10 hover:-translate-y-1 ${!item.href ? 'pointer-events-none' : ''}`}>
 									<div className="absolute inset-0 bg-gradient-to-br from-yellow-400/0 to-yellow-400/0 group-hover:from-yellow-400/5 group-hover:to-transparent rounded-xl transition-all duration-300"></div>
 
-									<div className="relative z-10 flex items-center gap-4">
+									<div className="relative z-10 flex items-center gap-4 ">
 										<div className="p-3 bg-yellow-400/10 rounded-lg text-yellow-400 group-hover:bg-yellow-400 group-hover:text-black transition-all duration-300">{item.icon}</div>
 										<div>
 											<p className="text-sm text-gray-400 mb-1">{item.label}</p>
