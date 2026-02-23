@@ -2,19 +2,19 @@ import { Button, IconButton } from '@mui/material';
 import { Code, Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 function Hero() {
-	const scrollToSection = (id: string) => {
-		const element = document.getElementById(id);
-		if (element) {
-			const offset = 80;
-			const elementPosition = element.getBoundingClientRect().top;
-			const offsetPosition = elementPosition + window.pageYOffset - offset;
+	// const scrollToSection = (id: string) => {
+	// 	const element = document.getElementById(id);
+	// 	if (element) {
+	// 		const offset = 80;
+	// 		const elementPosition = element.getBoundingClientRect().top;
+	// 		const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-			window.scrollTo({
-				top: offsetPosition,
-				behavior: 'smooth'
-			});
-		}
-	};
+	// 		window.scrollTo({
+	// 			top: offsetPosition,
+	// 			behavior: 'smooth'
+	// 		});
+	// 	}
+	// };
 
 	return (
 		<section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative pt-20 pb-24 overflow-hidden">
