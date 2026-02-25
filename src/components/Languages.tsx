@@ -37,8 +37,6 @@ function Languages() {
 					{/* Subtle gradient overlay on white card */}
 					<div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-pink-50/30 pointer-events-none"></div>
 
-					{/* Grid Pattern on White Card */}
-					<div className="absolute inset-0 bg-[linear-gradient(to_right,#80808006_1px,transparent_1px),linear-gradient(to_bottom,#80808006_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
 					{/* Content */}
 					<div className="relative z-10">

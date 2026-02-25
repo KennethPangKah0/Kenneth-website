@@ -51,12 +51,9 @@ function Experience() {
 		<section id="experience" className="flex items-center justify-center px-4 sm:px-6 lg:px-8 relative pb-24 overflow-hidden">
 			{/* White Container Card */}
 			<div className="max-w-4xl w-full mx-auto relative z-10 animate-fade-in">
-				<div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 relative overflow-hidden">
+				<div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl dark:shadow-gray-900/50 p-6 md:p-8 lg:p-10 relative overflow-hidden transition-colors duration-300">
 					{/* Subtle gradient overlay on white card */}
-					<div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30 pointer-events-none"></div>
-
-					{/* Grid Pattern on White Card */}
-					<div className="absolute inset-0 bg-[linear-gradient(to_right,#80808006_1px,transparent_1px),linear-gradient(to_bottom,#80808006_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+					<div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30 dark:from-blue-900/10 dark:via-transparent dark:to-purple-900/10 pointer-events-none"></div>
 
 					{/* Content */}
 					<div className="relative z-10">
@@ -64,52 +61,56 @@ function Experience() {
 						<div className="text-center mb-8 animate-fade-in">
 							<div className="inline-flex items-center justify-center mb-4">
 								<div className="h-px w-6 bg-gradient-to-r from-transparent to-blue-400/50"></div>
-								<div className="mx-3 p-2 bg-gray-50 rounded-lg border border-gray-200 shadow-md">
-									<Briefcase className="text-gray-700" size={20} />
+								<div className="mx-3 p-2 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 shadow-md transition-colors duration-300">
+									<Briefcase className="text-gray-700 dark:text-gray-300" size={20} />
 								</div>
 								<div className="h-px w-6 bg-gradient-to-l from-transparent to-blue-400/50"></div>
 							</div>
 							<h2 className="text-2xl md:text-3xl font-bold mb-2">
-								<span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent">Work</span> <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Experience</span>
+								<span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-gray-100 dark:via-gray-300 dark:to-gray-100 bg-clip-text text-transparent">Work</span> <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Experience</span>
 							</h2>
-							<p className="text-gray-600 text-sm max-w-2xl mx-auto">Building innovative solutions and delivering exceptional results</p>
+							<p className="text-gray-600 dark:text-gray-400 text-sm max-w-2xl mx-auto">Building innovative solutions and delivering exceptional results</p>
 						</div>
 
 						{!isExpanded ? (
 							// Compact List View
 							<div className="space-y-4">
 								{jobs.map((job, index) => (
-									<div key={index} className="group relative bg-gradient-to-br from-gray-50 to-gray-100 hover:bg-white border-2 border-gray-200 hover:border-blue-400/50 rounded-xl p-4 transition-all duration-300 hover:shadow-lg animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+									<div
+										key={index}
+										className="group relative bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 hover:bg-white dark:hover:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 hover:border-blue-400/50 dark:hover:border-blue-500/50 rounded-xl p-4 transition-all duration-300 hover:shadow-lg animate-fade-in"
+										style={{ animationDelay: `${index * 0.1}s` }}
+									>
 										{/* Hover glow */}
-										<div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:to-purple-50/50 rounded-xl transition-all duration-300"></div>
+										<div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 dark:from-blue-900/0 dark:to-purple-900/0 group-hover:from-blue-50/50 group-hover:to-purple-50/50 dark:group-hover:from-blue-900/20 dark:group-hover:to-purple-900/20 rounded-xl transition-all duration-300"></div>
 
 										<div className="relative z-10 flex items-start gap-4">
 											{/* Logo */}
 											<div className="flex-shrink-0">
-												<div className="w-12 h-12 bg-white rounded-xl border-2 border-gray-200 group-hover:border-blue-400 flex items-center justify-center text-2xl shadow-md transition-all duration-300">{job.logo}</div>
+												<div className="w-12 h-12 bg-white dark:bg-gray-600 rounded-xl border-2 border-gray-200 dark:border-gray-500 group-hover:border-blue-400 dark:group-hover:border-blue-500 flex items-center justify-center text-2xl shadow-md transition-all duration-300">{job.logo}</div>
 											</div>
 
 											{/* Content */}
 											<div className="flex-1 min-w-0">
 												<div className="flex items-start justify-between gap-2 mb-1">
 													<div className="flex-1">
-														<h3 className="text-base md:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{job.title}</h3>
-														<p className="text-sm text-gray-700 font-medium">
+														<h3 className="text-base md:text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{job.title}</h3>
+														<p className="text-sm text-gray-700 dark:text-gray-300 font-medium">
 															{job.company}
-															{job.type && <span className="text-gray-500 font-normal"> • {job.type}</span>}
+															{job.type && <span className="text-gray-500 dark:text-gray-400 font-normal"> • {job.type}</span>}
 														</p>
 													</div>
 													{job.isCurrent && <span className="px-2 py-0.5 bg-green-500 text-white text-xs font-bold rounded-full shadow-md flex-shrink-0">CURRENT</span>}
 												</div>
 
-												<div className="flex flex-wrap items-center gap-3 text-gray-600 text-xs mt-2">
+												<div className="flex flex-wrap items-center gap-3 text-gray-600 dark:text-gray-400 text-xs mt-2">
 													<div className="flex items-center gap-1">
 														<MapPin size={14} className="text-green-500" />
 														<span>{job.location}</span>
 													</div>
 													<div className="flex items-center gap-1">
 														<Calendar size={14} className="text-green-500" />
-														<span className={job.isCurrent ? 'text-green-600 font-semibold' : ''}>{job.period}</span>
+														<span className={job.isCurrent ? 'text-green-600 dark:text-green-400 font-semibold' : ''}>{job.period}</span>
 													</div>
 												</div>
 											</div>
@@ -119,7 +120,10 @@ function Experience() {
 
 								{/* View Details Button */}
 								<div className="text-center mt-6 pt-4">
-									<button onClick={() => setIsExpanded(true)} className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-0 outline-none focus:outline-none">
+									<button
+										onClick={() => setIsExpanded(true)}
+										className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-0 outline-none focus:outline-none"
+									>
 										<ChevronDown size={18} />
 										<span>View Details</span>
 									</button>
@@ -129,7 +133,7 @@ function Experience() {
 							// Expanded Timeline View
 							<div className="relative">
 								{/* Timeline line */}
-								<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-400/50 via-purple-400/30 to-transparent"></div>
+								<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-400/50 via-purple-400/30 to-transparent dark:from-blue-500/50 dark:via-purple-500/30"></div>
 
 								<div className="space-y-6">
 									{jobs.map((job, index) => (
@@ -141,41 +145,51 @@ function Experience() {
 											</div>
 
 											{/* Grey Card */}
-											<div className={`group relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-2 ${job.isCurrent ? 'border-green-400/50' : 'border-gray-200 hover:border-blue-400/50'}`}>
+											<div
+												className={`group relative bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-2 ${
+													job.isCurrent ? 'border-green-400/50 dark:border-green-500/50' : 'border-gray-200 dark:border-gray-600 hover:border-blue-400/50 dark:hover:border-blue-500/50'
+												}`}
+											>
 												{/* Glow effect */}
-												<div className={`absolute inset-0 rounded-xl transition-all duration-300 ${job.isCurrent ? 'bg-gradient-to-br from-green-50/50 to-transparent' : 'bg-gradient-to-br from-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:to-purple-50/50'}`}></div>
+												<div
+													className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+														job.isCurrent
+															? 'bg-gradient-to-br from-green-50/50 to-transparent dark:from-green-900/20 dark:to-transparent'
+															: 'bg-gradient-to-br from-blue-50/0 to-purple-50/0 dark:from-blue-900/0 dark:to-purple-900/0 group-hover:from-blue-50/50 group-hover:to-purple-50/50 dark:group-hover:from-blue-900/20 dark:group-hover:to-purple-900/20'
+													}`}
+												></div>
 
 												<div className="relative z-10 p-5">
 													{/* Header */}
 													<div className="mb-3">
 														<div className="flex items-start justify-between gap-2 mb-2">
 															<div className="flex-1">
-																<h3 className="text-lg md:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">{job.title}</h3>
-																<p className="text-gray-800 text-sm md:text-base font-semibold">{job.company}</p>
+																<h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-1">{job.title}</h3>
+																<p className="text-gray-800 dark:text-gray-200 text-sm md:text-base font-semibold">{job.company}</p>
 															</div>
 															{job.isCurrent && <span className="px-2 py-0.5 bg-green-500 text-white text-xs font-bold rounded-full shadow-lg shadow-green-500/30 flex-shrink-0">CURRENT</span>}
 														</div>
-														<div className="flex flex-wrap items-center gap-2 text-gray-600 text-xs">
+														<div className="flex flex-wrap items-center gap-2 text-gray-600 dark:text-gray-400 text-xs">
 															<div className="flex items-center gap-1">
 																<MapPin size={14} className="text-green-500" />
 																<span>{job.location}</span>
 															</div>
 															<div className="flex items-center gap-1">
 																<Calendar size={14} className="text-green-500" />
-																<span className={job.isCurrent ? 'text-green-600 font-semibold' : ''}>{job.period}</span>
+																<span className={job.isCurrent ? 'text-green-600 dark:text-green-400 font-semibold' : ''}>{job.period}</span>
 															</div>
 														</div>
 													</div>
 
 													{/* Divider */}
-													<div className="h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 mb-3"></div>
+													<div className="h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-600 dark:via-gray-500 dark:to-gray-600 mb-3"></div>
 
 													{/* Responsibilities */}
 													<div>
-														<h4 className="text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wide">Key Responsibilities</h4>
+														<h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2 uppercase tracking-wide">Key Responsibilities</h4>
 														<ul className="space-y-1.5">
 															{job.responsibilities.map((responsibility, idx) => (
-																<li key={idx} className="flex items-start text-gray-700 leading-relaxed text-xs">
+																<li key={idx} className="flex items-start text-gray-700 dark:text-gray-300 leading-relaxed text-xs">
 																	<span className="flex-shrink-0 mr-2 mt-1">
 																		<div className={`w-1 h-1 rounded-full ${job.isCurrent ? 'bg-green-500' : 'bg-blue-500'}`}></div>
 																	</span>
@@ -187,7 +201,11 @@ function Experience() {
 												</div>
 
 												{/* Corner Accent */}
-												<div className={`absolute top-0 right-0 w-12 h-12 rounded-bl-full transition-opacity duration-300 ${job.isCurrent ? 'bg-gradient-to-br from-green-400/10 to-transparent' : 'bg-gradient-to-br from-blue-400/0 to-transparent group-hover:from-blue-400/10'}`}></div>
+												<div
+													className={`absolute top-0 right-0 w-12 h-12 rounded-bl-full transition-opacity duration-300 ${
+														job.isCurrent ? 'bg-gradient-to-br from-green-400/10 to-transparent dark:from-green-500/10' : 'bg-gradient-to-br from-blue-400/0 to-transparent dark:from-blue-500/0 group-hover:from-blue-400/10 dark:group-hover:from-blue-500/10'
+													}`}
+												></div>
 											</div>
 										</div>
 									))}
@@ -196,7 +214,10 @@ function Experience() {
 								{/* Show Less Button */}
 								<div className="text-center mt-8">
 									<div className="text-center mt-6 pt-4">
-										<button onClick={() => setIsExpanded(false)} className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-0 outline-none focus:outline-none">
+										<button
+											onClick={() => setIsExpanded(false)}
+											className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-0 outline-none focus:outline-none"
+										>
 											<ChevronUp size={18} />
 											<span>Show Less</span>
 										</button>

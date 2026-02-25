@@ -142,22 +142,20 @@ code {
 }
 
 /* Tech Stack Carousel Fade Overlays */
-.tech-carousel-fade-left {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 5rem;
-	background: linear-gradient(to right, white, transparent);
-	pointer-events: none;
-}
-
+.tech-carousel-fade-left,
 .tech-carousel-fade-right {
 	position: absolute;
 	top: 0;
-	right: 0;
-	bottom: 0;
-	width: 5rem;
-	background: linear-gradient(to left, white, transparent);
+	height: 100%;
+	width: 6rem;
 	pointer-events: none;
+	z-index: 10;
+}
+
+.tech-carousel-fade-left {
+	left: 0;
+}
+
+.tech-carousel-fade-right {
+	right: 0;
 }
